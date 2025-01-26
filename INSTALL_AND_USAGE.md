@@ -97,6 +97,11 @@ Optional, only if you want to use Qdrant cloud. Otherwise, you can complete the 
 You can create a Python virtual environment and install all the necessary dependencies using Poetry, by running:
 ```shell
 make install
+make install 命令通常意味着执行 Makefile（或同目录下的 makefile、GNUmakefile 这类同等文件）当中名为 “install” 的目标（target）。它的典型作用是将已经编译完成的可执行文件、库文件、配置文件等，复制或移动到系统的指定安装位置（例如 /usr/local/bin、/usr/local/lib 等），以便在系统范围内使用这些文件。
+简而言之：
+make 会在当前目录下寻找名为 Makefile（或 makefile、GNUmakefile）的文件。
+make install 会读取该文件中定义的 install 目标，并执行其中的安装步骤（如拷贝、创建目录、修改权限等）。
+最终效果是将编译产物正确地安装到你的系统或指定位置，供后续使用。
 ```
 > [!IMPORTANT] 
 > You need Python 3.11 installed! You can either install it globally or install [pyenv](https://github.com/pyenv/pyenv) to manage multiple Python dependencies. The `.python-version` file will signal to `pyenv` what Python version it needs to use in this particular project.
