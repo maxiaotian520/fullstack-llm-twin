@@ -114,12 +114,14 @@ poetry shell
 ## Set up the data infrastructure
 
 We support running the entire data infrastructure (crawling, CDC, MongoDB, and Qdrant) through Docker. Thus, with a few commands you can quickly populate the data warehouse and vector DB with relevant data to test out the RAG, training, and inference parts of the course.
+这里crawling, CDC, MongoDB, and Qdrant四个部分都是在Docker里运行
 
 ### Spin up the infrastructure
 
 You can start all the required Docker containers, by running:
 ```shell
 make local-start
+这个命令直接调用了Makefile里的Local-start部分，来启动容器
 ```
 It will take a while to run until all the Docker images are pulled or built.
 
